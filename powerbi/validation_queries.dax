@@ -1,0 +1,17 @@
+// overall
+EVALUATE ROW("Gross",[Gross Sales GBP],"Credits",[Credit Value GBP],"Net",[Net Sales GBP],"Orders",[Orders],"AverageOrder",[Average Order GBP],"Coverage",[Customer ID Sales Coverage],"CreditRatio",[Credit to Sales Ratio],"Buyers",[Identified Buyers],"RepeatBuyers",[Snapshot Repeat Buyers],"RepeatRate",[Snapshot Repeat Rate],"Lines",COUNTROWS(FactOrderLine))
+
+// monthly
+EVALUATE SUMMARIZECOLUMNS(DimDate[month_label],"Gross",[Gross Sales GBP],"Credits",[Credit Value GBP],"Net",[Net Sales GBP],"Orders",[Orders],"Coverage",[Customer ID Sales Coverage])
+
+// countries
+EVALUATE SUMMARIZECOLUMNS(DimCountry[country_name],"Gross",[Gross Sales GBP],"Credits",[Credit Value GBP],"Net",[Net Sales GBP],"Orders",[Orders])
+
+// products
+EVALUATE SUMMARIZECOLUMNS(DimProduct[product_key],"Gross",[Gross Sales GBP],"Credits",[Credit Value GBP],"Net",[Net Sales GBP],"Orders",[Orders],"Units",[Sold Units])
+
+// cohorts
+EVALUATE SUMMARIZECOLUMNS(CohortActivity[cohort_month],CohortActivity[month_age],"Repurchase",[Cohort Repurchase Rate])
+
+// cohort_totals
+EVALUATE ROW("UnfilteredRate",[Cohort Repurchase Rate],"NovemberAgeOne",CALCULATE([Cohort Repurchase Rate],CohortActivity[cohort_month]="2011-11",CohortActivity[month_age]=1))

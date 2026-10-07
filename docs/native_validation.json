@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "comparisons": 19318,
+  "monthly_groups": 12,
+  "country_groups": 38,
+  "product_groups": 3803,
+  "observed_cohort_cells": 78,
+  "unobserved_ages_and_multi_age_totals": "blank",
+  "scope": "Native Power BI DAX engine compared with SQLite; visual layout is verified separately.",
+  "analysis_fingerprint": {
+    "scripts/pipeline.py": "6f46691098999f495431b9f11e886738b9eee4b9c782fa2f7d6a6930daa411d1",
+    "scripts/build_powerbi.py": "609150f53baa8bfd897839659a6fedfbd62aa86f90e1b780c3e906f50c321c5f",
+    "sql/schema.sql": "be4b8f0053a9e51ba17d64eca2d065fbb1de4e4d7ef962181b45aaf53ee61ec3",
+    "sql/analytics.sql": "089d3893ad14e4d9d1c61fe49a513c8d629ca31d9075ef2692c333466122a474",
+    "powerbi/measures.dax": "e56498dfe87614c8c3b27396d153aec4d38c57ac2b2d57afc2db7f8cc9b13467",
+    "powerbi/validation_queries.dax": "c703b0e6035edc3ee29e939650e5ef9eebca0cff021f1e6e864695af6d62328e",
+    "powerbi/Retail.SemanticModel/model.bim": "91d102c163846bf6944295c1d6df74ed9275383ba23cf7570ac39231d99f3cb7",
+    "data/processed/cohort_activity.csv": "e374215659a4c123b14f7fe3d1d5d62a7a0a06f32ba44d5c84ee1e02d7427ae8",
+    "data/processed/country_sales.csv": "e650cd7ab9179d4ee7910875d87d413d23be7b1c243e2f4631645cea33d7522b",
+    "data/processed/customer_snapshot.csv": "e46ccd6e8342e4a84c5fcab86624150bf892f1136b28661aefb4da73bab50f24",
+    "data/processed/dim_country.csv": "8de6cf2ebeac3d72833e266626fa7c6a80238005921fdc95bd1d221105b102c7",
+    "data/processed/dim_customer.csv": "65fff2a4a80bb52ea59ca526c0320187dba386673108d0efef26de36dd0eb8b6",
+    "data/processed/dim_date.csv": "1bb96992f5c4bbfc032fc7577ecaf68f42cfe8bbd418866811f711933960e885",
+    "data/processed/dim_product.csv": "a729721f8846786bb9e4c09e0a276c9dbf1cf152ca97aee53b053bab6d75e17d",
+    "data/processed/fact_order_line.csv": "73763e89420c703b67f42cd33456c2a03fabf2e49ab5c4ee0e5310c650acb94a",
+    "data/processed/monthly_sales.csv": "4df1f406ad6dc41b0039c46b5047542de30eac254977c6e24960e41fffbed9ff",
+    "data/processed/product_sales.csv": "d24d211be0da4fb49cdfdccaa5a9a4357d4c778bc746c512afc31bd30adff294"
+  },
+  "captured_results_sha256": "e5f5a31772d548b3cd79628d1128e582f41f792f1c5562f142ca667aa43f7981"
+}

@@ -1,0 +1,35 @@
+// Values refer to merchandise only. Line values are rounded to integer pence.
+Gross Sales GBP = CALCULATE(SUM(FactOrderLine[line_pence]), FactOrderLine[transaction_type] = "Sale") / 100
+
+Credit Value GBP = COALESCE(-CALCULATE(SUM(FactOrderLine[line_pence]), FactOrderLine[transaction_type] = "Credit") / 100, 0)
+
+Net Sales GBP = SUM(FactOrderLine[line_pence]) / 100
+
+Orders = CALCULATE(DISTINCTCOUNT(FactOrderLine[invoice_no]), FactOrderLine[transaction_type] = "Sale")
+
+Average Order GBP = DIVIDE([Gross Sales GBP], [Orders])
+
+Credit to Sales Ratio = DIVIDE([Credit Value GBP], [Gross Sales GBP])
+
+Identified Buyers = COALESCE(CALCULATE(DISTINCTCOUNT(FactOrderLine[customer_key]), FactOrderLine[transaction_type] = "Sale", FactOrderLine[customer_key] <> "Unknown"), 0)
+
+Identified Sales GBP = COALESCE(CALCULATE([Gross Sales GBP], FactOrderLine[customer_key] <> "Unknown"), 0)
+
+Customer ID Sales Coverage = DIVIDE([Identified Sales GBP], [Gross Sales GBP])
+
+Sold Units = CALCULATE(SUM(FactOrderLine[quantity]), FactOrderLine[transaction_type] = "Sale")
+
+Snapshot Buyers = COUNTROWS(CustomerSnapshot)
+
+Snapshot Repeat Buyers = CALCULATE(COUNTROWS(CustomerSnapshot), CustomerSnapshot[purchase_orders] >= 2)
+
+Snapshot Repeat Rate = DIVIDE([Snapshot Repeat Buyers], [Snapshot Buyers])
+
+Snapshot Gross Sales GBP = SUM(CustomerSnapshot[gross_sales_gbp])
+
+Snapshot Orders = SUM(CustomerSnapshot[purchase_orders])
+
+Cohort Repurchase Rate = IF(ISINSCOPE(CohortActivity[month_age]), DIVIDE(SUM(CohortActivity[active_customers]), SUM(CohortActivity[cohort_size])))
+
+Cohort Active Buyers = SUM(CohortActivity[active_customers])
+

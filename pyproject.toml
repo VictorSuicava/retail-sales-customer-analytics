@@ -1,0 +1,7 @@
+[project]
+name = "retail-sales-customer-analytics"
+version = "0.1.0"
+description = "Retail revenue and observed customer repeat purchasing with Python, SQL and Power BI"
+requires-python = ">=3.10"
+dependencies = ["openpyxl==3.1.5"]
+

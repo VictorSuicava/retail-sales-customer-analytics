@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/warehouse/*
+!data/warehouse/.gitkeep
+**/.pbi/
+*.pbix
+*.pbit
+powerbi/Retail.SemanticModel/model.bim
+powerbi/Retail.SemanticModel/definition/
+

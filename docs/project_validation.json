@@ -1,0 +1,29 @@
+{
+  "sql_reconciliation": {
+    "passed": true,
+    "source_and_fact_rows": 511051,
+    "net_sales_pence": 935094721,
+    "gross_sales_pence": 965554463,
+    "credit_pence_signed": -30459742,
+    "foreign_key_violations": 0,
+    "conflicting_invoices": 0,
+    "observed_cohort_cells": 78
+  },
+  "csv_row_counts": {
+    "DimDate": 365,
+    "DimProduct": 3803,
+    "DimCountry": 38,
+    "DimCustomer": 4322,
+    "FactOrderLine": 511051,
+    "CustomerSnapshot": 4293,
+    "CohortActivity": 78
+  },
+  "pages": 4,
+  "visuals": 33,
+  "measure_count": 17,
+  "model_and_visual_references": "passed",
+  "official_schema_files_validated": 42,
+  "native_desktop_refresh": "passed",
+  "native_dax_execution": "passed",
+  "native_visual_validation": "passed"
+}

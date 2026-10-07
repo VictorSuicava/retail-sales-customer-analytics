@@ -1,0 +1,37 @@
+{
+  "source_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+  "source_page": "https://archive.ics.uci.edu/dataset/352/online+retail",
+  "license": "CC BY 4.0",
+  "snapshot_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "processed_at_utc": "2026-10-07T16:16:32.016116+00:00",
+  "source_rows": 541909,
+  "analysis_start": "2010-12-01",
+  "analysis_end_exclusive": "2011-12-01",
+  "classification_counts": {
+    "Credit": 8704,
+    "Invalid value": 2485,
+    "Non-merchandise": 2995,
+    "Sale": 527725
+  },
+  "outside_window_eligible_rows": 25378,
+  "exact_duplicate_rows_retained": 5268,
+  "duplicate_policy": "Keep and flag exact duplicate observations; source has no unique line identifier.",
+  "checks": {
+    "passed": true,
+    "source_and_fact_rows": 511051,
+    "net_sales_pence": 935094721,
+    "gross_sales_pence": 965554463,
+    "credit_pence_signed": -30459742,
+    "foreign_key_violations": 0,
+    "conflicting_invoices": 0,
+    "observed_cohort_cells": 78
+  },
+  "summary": {
+    "orders": 18957,
+    "identified_buyers": 4293,
+    "unknown_customer_sale_rows": 123600,
+    "repeat_buyers": 2742,
+    "products": 3803,
+    "countries": 38
+  }
+}
